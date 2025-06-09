@@ -2,6 +2,8 @@
 
 Ini adalah aplikasi klien Android untuk platform MyChat. Aplikasi ini memungkinkan pengguna untuk melakukan chatting secara real-time, mengelola profil, melihat detail percakapan, dan fitur-fitur lainnya.
 
+### Link Repository API Backend ChatOI App Mobile (Python/FastAPI) : [**ChatOI**](https://github.com/PangeranJJ4321/Mobile-Chat-API)
+
 ## Teknologi
 
 * **Android Development**: Dikembangkan menggunakan Kotlin/Java dengan Android Studio.
