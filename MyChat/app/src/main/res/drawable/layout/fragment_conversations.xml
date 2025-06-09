@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/surface_color"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/search_bar_gradient">
+
+            <ImageView
+                android:id="@+id/ic_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="12dp"
+                app:tint="@color/primary_color" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/search_conversations"
+                android:textColorHint="@color/secondary_text"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingVertical="4dp" />
+
+            <ImageView
+                android:id="@+id/ic_filter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_filter"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/filter_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                app:tint="@color/surface_color" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/active_users_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_card">
+
+        <TextView
+            android:id="@+id/tv_active_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Active Now"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:fontFamily="@font/poppins_medium"
+            android:letterSpacing="0.02" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_active_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_active_user" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/gradient_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/active_users_container" />
+
+    <LinearLayout
+        android:id="@+id/conversations_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Recent Conversations"
+            android:textSize="18sp"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/poppins_medium" />
+
+        <ImageView
+            android:id="@+id/ic_more_options"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_more_vert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            app:tint="@color/secondary_text" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_conversations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="@color/background_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conversations_header"
+        tools:listitem="@layout/item_conversation" />
+
+    <LinearLayout
+        android:id="@+id/layout_empty_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/empty_state_background"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_empty_chat"
+            android:alpha="0.8"
+            app:tint="@color/primary_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/no_conversations"
+            android:textSize="20sp"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_empty_state_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/start_new_conversation"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Start Chatting"
+            android:textColor="@color/surface_color"
+            android:backgroundTint="@color/primary_color"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_add_chat"
+            app:iconTint="@color/surface_color"
+            style="@style/Widget.Material3.Button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@color/primary_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Loading conversations..."
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:fontFamily="@font/poppins_regular" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

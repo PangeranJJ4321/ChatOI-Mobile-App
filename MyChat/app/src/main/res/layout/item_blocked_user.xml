@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingVertical="8dp"
+    android:background="?attr/selectableItemBackground">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_blocked_user_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/default_avatar"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Blocked User Avatar"
+        android:background="@drawable/circle_background_primary"
+        app:shapeAppearanceOverlay="@style/CircleImageViewShape" />
+
+
+
+    <TextView
+        android:id="@+id/tv_blocked_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Blocked User Name"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <Button
+        android:id="@+id/btn_unblock_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unblock"
+        android:backgroundTint="@color/green_500"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:minWidth="0dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        app:cornerRadius="8dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>

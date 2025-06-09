@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- CheckBox untuk select user -->
+    <CheckBox
+        android:id="@+id/cb_select_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"/>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_user_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/default_avatar"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/profile"
+        android:background="@drawable/circle_background_primary"
+        app:shapeAppearanceOverlay="@style/CircleImageViewShape" />
+
+
+    <!-- Nama user -->
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Pangeran"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tv_user_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online"
+        android:textColor="@color/green_500"
+        android:layout_marginEnd="16dp"/>
+</LinearLayout>

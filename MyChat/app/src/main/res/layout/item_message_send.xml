@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="68dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_marginBottom="7dp"
+    android:orientation="vertical"
+    android:gravity="end">
+
+    <!-- Message Bubble -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/telegram_bubble_outgoing"
+        android:orientation="vertical"
+        android:minWidth="80dp"
+        android:maxWidth="260dp">
+
+        <!-- Message Text -->
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Halo, apa kabar?"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Time and Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:25"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#8aa7c7" />
+
+            <ImageView
+                android:id="@+id/iv_message_status"
+                android:layout_width="16dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_message_status_sent"
+                app:tint="#8aa7c7"
+                android:visibility="visible"
+                android:contentDescription="@string/message_status" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

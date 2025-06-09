@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingEnd="68dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_marginBottom="7dp"
+    android:orientation="horizontal"
+    android:gravity="start">
+
+    <!-- Avatar for Group Messages -->
+    <ImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/default_avatar"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/contact_avatar"
+        android:visibility="visible" />
+
+    <!-- Message Bubble -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/telegram_bubble_incoming"
+        android:orientation="vertical"
+        android:minWidth="80dp"
+        android:maxWidth="260dp">
+
+        <!-- Sender Name -->
+        <TextView
+            android:id="@+id/text_sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:text="Nama Pengirim"
+            android:textColor="#5ba0e4"
+            android:textSize="14sp" />
+
+        <!-- Message Text -->
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pesan dari dia nih 😳"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="2dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:24"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#8aa7c7"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="4dp"
+            android:layout_gravity="end" />
+    </LinearLayout>
+</LinearLayout>

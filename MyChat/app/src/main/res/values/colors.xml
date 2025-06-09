@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_color">#6C63FF</color>
+    <color name="primary_dark">#5A52D5</color>
+    <color name="primary_light">#8B85FF</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_color">#FF6B6B</color>
+    <color name="accent_dark">#E55A5A</color>
+    <color name="accent_light">#FF8E8E</color>
+
+    <!-- Text Colors -->
+    <color name="primary_text">#2D3748</color>
+    <color name="secondary_text">#718096</color>
+    <color name="tertiary_text">#A0AEC0</color>
+
+    <!-- Background Colors -->
+    <color name="background_primary">#F7FAFC</color>
+    <color name="background_secondary">#EDF2F7</color>
+    <color name="surface_color">#FFFFFF</color>
+
+    <!-- Other Colors -->
+    <color name="divider_color">#4A5568</color>
+    <color name="error_color">#E53E3E</color>
+    <color name="success_color">#38A169</color>
+    <color name="warning_color">#D69E2E</color>
+
+    <color name="avatar_gradient_start">#E1BEE7</color>
+    <color name="avatar_gradient_end">#B39DDB</color>
+
+    <color name="admin_blue">#2196F3</color>
+    <color name="moderator_purple">#9C27B0</color>
+    <color name="member_gray">#757575</color>
+    <color name="verified_blue">#1DA1F2</color>
+    <color name="primary_500">#711CE6</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="red_500">#F44336</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="icon_primary">#424242</color>
+    <color name="icon_secondary">#757575</color>
+    <color name="icon_warning">#FF9800</color>
+    <color name="gray_400">#EC1909</color>
+
+    <color name="status_read_color">#2196F3</color>
+    <color name="status_delivered_color">#90CAF9</color>
+    <color name="status_sent_color">#BDBDBD</color>
+    <color name="status_sending_color">#BDBDBD</color>
+
+    <color name="online_status_color">#4CAF50</color>
+    <color name="unread_badge_color">#2196F3</color>
+    <color name="read_status_color">#2196F3</color>
+    <color name="sent_status_color">#9E9E9E</color>
+    <color name="muted_icon_color">#9E9E9E</color>
+    <color name="pinned_icon_color">#FF9800</color>
+    <color name="priority_indicator_color">#FF4444</color>
+
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:id="@+id/main">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        android:background="@color/background_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_chat"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@color/surface_color"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/primary_text"
+            app:menu="@menu/chat_toolbar_menu">
+
+            <LinearLayout
+                android:id="@+id/chat_header_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="56dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_chat_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_chat_profile_picture"
+                        android:layout_width="37dp"
+                        android:layout_height="37dp"
+                        android:src="@drawable/default_avatar"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_chat_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/poppins_medium"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="John Doe" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/poppins_regular"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="last seen recently" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:scrollbars="none"
+        android:background="@color/background_primary"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_message_input_area"
+        tools:listitem="@layout/item_message_received_group" />
+
+    <LinearLayout
+        android:id="@+id/layout_typing_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/layout_message_input_area"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/telegram_bubble_incoming"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/poppins_regular"
+                android:text="typing" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_typing_dots"
+                android:layout_width="24dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                app:lottie_rawRes="@raw/typing_dots"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_message_input_area"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/surface_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_attachment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/telegram_circular_button"
+            android:src="@drawable/ic_attach_file"
+            android:contentDescription="@string/attach_file"
+            android:padding="8dp"
+            app:tint="#8aa7c7" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/telegram_input_background"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_message_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Message"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="5"
+                android:minHeight="36dp"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text"
+                android:textColorHint="#8aa7c7"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/fab_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/telegram_circular_button"
+            android:src="@drawable/telegram_send_button"
+            android:contentDescription="@string/send_message"
+            android:padding="8dp"
+            app:tint="#8aa7c7" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/bottom_sheet_attachments"
+        tools:viewBindingIgnore="true"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <!-- Bottom Navigation Text Styles -->
+    <style name="BottomNavTextActive">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="BottomNavTextInactive">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!-- FAB Shape Appearance -->
+    <style name="FABShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- App Theme Updates -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/surface_color</item>
+
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorOnSecondary">@color/surface_color</item>
+
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/background_primary</item>
+        <item name="colorSurface">@color/surface_color</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/surface_color</item>
+
+        <!-- Error Color -->
+        <item name="colorError">@color/error_color</item>
+        <item name="colorOnError">@color/surface_color</item>
+    </style>
+    <style name="CircularImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CircleImageViewShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

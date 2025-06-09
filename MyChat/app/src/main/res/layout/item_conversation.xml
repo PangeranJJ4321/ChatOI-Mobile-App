@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_primary"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <!-- Profile Picture -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profile_picture"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@color/background_secondary"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        tools:src="@drawable/default_avatar" />
+
+    <!-- Online Status Indicator -->
+    <View
+        android:id="@+id/view_online_status"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/online_status_indicator"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_picture"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_picture"
+        tools:visibility="visible" />
+
+    <!-- Conversation Name -->
+    <TextView
+        android:id="@+id/tv_conversation_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLines="1"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/timestamp_container"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_picture"
+        app:layout_constraintTop_toTopOf="@id/iv_profile_picture"
+        tools:text="John Doe" />
+
+    <!-- Last Message -->
+    <TextView
+        android:id="@+id/tv_last_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_regular"
+        android:maxLines="1"
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/status_container"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/tv_conversation_name"
+        tools:text="Hey! How are you doing today?" />
+
+    <!-- Timestamp Container -->
+    <LinearLayout
+        android:id="@+id/timestamp_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_conversation_name">
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/tertiary_text"
+            android:textSize="13sp"
+            tools:text="14:30" />
+
+    </LinearLayout>
+
+    <!-- Status Container (unread count, status icons) -->
+    <LinearLayout
+        android:id="@+id/status_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tv_last_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_last_message">
+
+        <!-- Message Status Icon (checkmarks) -->
+        <ImageView
+            android:id="@+id/iv_message_status"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            app:tint="@color/primary_color"
+            tools:src="@drawable/ic_check_read"
+            tools:visibility="visible" />
+
+        <!-- Muted Icon -->
+        <ImageView
+            android:id="@+id/iv_muted"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_volume_off"
+            android:visibility="gone"
+            app:tint="@color/muted_icon_color"
+            tools:visibility="visible" />
+
+        <!-- Unread Count Badge Frame (DIPERBAIKI) -->
+        <FrameLayout
+            android:id="@+id/unread_badge_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_unread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/unread_badge_background"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/surface_color"
+                android:textSize="12sp"
+                tools:text="3" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Typing Indicator -->
+    <LinearLayout
+        android:id="@+id/layout_typing_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/tv_last_message"
+        app:layout_constraintTop_toTopOf="@id/tv_last_message"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="typing"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp" />
+
+        <!-- Typing Dots Animation -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/typing_dot" />
+
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/typing_dot" />
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:background="@drawable/typing_dot" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Pinned Indicator -->
+    <ImageView
+        android:id="@+id/iv_pinned"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_push_pin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/timestamp_container"
+        app:layout_constraintTop_toTopOf="@id/timestamp_container"
+        app:tint="@color/pinned_icon_color"
+        tools:visibility="visible" />
+
+    <!-- Priority Indicator (DITAMBAHKAN) -->
+    <View
+        android:id="@+id/priority_indicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/priority_indicator_color"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0.2"
+        android:background="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_conversation_name"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

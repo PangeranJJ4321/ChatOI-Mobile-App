@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:background="@color/background_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Back Button + Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kembali"
+                app:tint="@color/primary_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buat Percakapan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:fontFamily="@font/poppins_bold"
+                android:letterSpacing="0.02"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Checkbox Grup -->
+        <CheckBox
+            android:id="@+id/cb_is_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:paddingStart="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Buat Grup Chat"
+            android:background="@drawable/bg_rounded_card"
+            android:layout_marginTop="16dp" />
+
+        <!-- Nama Grup -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_conversation_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Grup (Opsional)"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_rounded_card"
+            android:visibility="gone"/>
+
+
+        <!-- Pilih dari daftar -->
+        <TextView
+            android:id="@+id/tv_choose_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih dari daftar:"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_search_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Cari pengguna..."
+            app:startIconDrawable="@drawable/ic_search"
+            app:endIconMode="clear_text"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sv_user_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search_box"
+                android:inputType="text"
+                android:textColor="@color/primary_text"
+                android:hint="Cari pengguna..." />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_user_list"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_rounded_card"
+            android:layout_height="400dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="12dp" />
+
+        <!-- Button Buat -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buat_percakapan"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/primary_color"
+            android:textColor="@android:color/white"
+            app:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="16dp" />
+
+
+    </LinearLayout>
+</ScrollView>

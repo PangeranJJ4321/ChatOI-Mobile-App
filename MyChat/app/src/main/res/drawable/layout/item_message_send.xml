@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:gravity="end">
+
+    <!-- Chat Bubble -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_bubble_send"
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:minWidth="60dp"
+        android:maxWidth="75dp"
+        android:elevation="1dp">
+
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Ini balasan dari kamu 🥰"
+            android:textColor="@color/surface_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:25"
+            android:textSize="10sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/secondary_text"
+            android:layout_marginTop="4dp"
+            android:gravity="end" />
+    </LinearLayout>
+</LinearLayout>

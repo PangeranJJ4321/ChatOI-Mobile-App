@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Dark Theme -->
+    <color name="primary_color">#8B85FF</color>
+    <color name="primary_dark">#6C63FF</color>
+    <color name="primary_light">#A29BFF</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_color">#FF8E8E</color>
+    <color name="accent_dark">#FF6B6B</color>
+    <color name="accent_light">#FFB1B1</color>
+
+    <!-- Text Colors - Inverted for dark theme -->
+    <color name="primary_text">#F7FAFC</color>
+    <color name="secondary_text">#CBD5E0</color>
+    <color name="tertiary_text">#A0AEC0</color>
+
+    <!-- Background Colors - Dark backgrounds -->
+    <color name="background_primary">#1A202C</color>
+    <color name="background_secondary">#2D3748</color>
+    <color name="surface_color">#2D3748</color>
+
+    <!-- Other Colors -->
+    <color name="divider_color">#E2E8F0</color>
+    <color name="error_color">#FC8181</color>
+    <color name="success_color">#68D391</color>
+    <color name="warning_color">#F6E05E</color>
+
+    <!-- Avatar and status colors -->
+    <color name="avatar_gradient_start">#553C9A</color>
+    <color name="avatar_gradient_end">#7C3AED</color>
+
+    <color name="admin_blue">#63B3ED</color>
+    <color name="moderator_purple">#B794F6</color>
+    <color name="member_gray">#A0AEC0</color>
+    <color name="verified_blue">#63B3ED</color>
+    <color name="primary_500">#8B5CF6</color>
+    <color name="green_500">#68D391</color>
+    <color name="blue_500">#63B3ED</color>
+    <color name="red_500">#FC8181</color>
+    <color name="orange_500">#F6AD55</color>
+    <color name="icon_primary">#F7FAFC</color>
+    <color name="icon_secondary">#CBD5E0</color>
+    <color name="icon_warning">#F6AD55</color>
+
+    <color name="status_read_color">#2196F3</color>
+    <color name="status_delivered_color">#90CAF9</color>
+    <color name="status_sent_color">#BDBDBD</color>
+    <color name="status_sending_color">#BDBDBD</color>
+
+    <color name="online_status_color">#4CAF50</color>
+    <color name="unread_badge_color">#2196F3</color>
+    <color name="read_status_color">#2196F3</color>
+    <color name="sent_status_color">#9E9E9E</color>
+    <color name="muted_icon_color">#9E9E9E</color>
+    <color name="pinned_icon_color">#FF9800</color>
+    <color name="priority_indicator_color">#FF4444</color>
+
+
+
+    </resources>

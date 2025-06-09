@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_primary"
+    tools:context=".EditProfileActivity">
+
+    <!-- Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/background_primary">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            app:tint="@color/primary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit profil"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="0.02"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/surface_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <!-- Profile Avatar -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/iv_edit_camera_overlay"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="4dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/background_primary"
+                        android:layout_marginBottom="16dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_edit_user_avatar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/default_avatar"
+                                android:scaleType="centerCrop"
+                                android:background="@color/background_secondary"
+                                android:contentDescription="@string/foto_profil" />
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="bottom|end"
+                                android:layout_margin="8dp"
+                                android:src="@drawable/ic_camera_alt"
+                                android:background="@drawable/circle_background_primary"
+                                android:padding="6dp"
+                                app:tint="@android:color/white"
+                                android:contentDescription="@string/ubah_foto" />
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Klik untuk ubah profile"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Username -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEditUsername"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:textColorHint="@color/secondary_text"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="@color/primary_color"
+                        app:boxCornerRadiusTopStart="12dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/secondary_text"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Email -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEditEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email (Optional)"
+                        android:textColorHint="@color/secondary_text"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="@color/primary_color"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/secondary_text"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kosongkan jika tidak ingin mengganti email"
+                        android:textSize="12sp"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <!-- Password -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEditPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:textColorHint="@color/secondary_text"
+                        android:hint="Password baru (opsional)"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="@color/primary_color"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEditPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="@color/secondary_text"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kosongkan jika tidak ingin mengganti password"
+                        android:textSize="12sp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <!-- Save Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSaveChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ubah"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:cornerRadius="12dp"
+                        app:backgroundTint="@color/primary_color"
+                        android:textColor="@android:color/white"
+                        app:elevation="4dp"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="16dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
