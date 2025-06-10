@@ -78,6 +78,10 @@ Berikut adalah tampilan visual dari berbagai halaman dan fitur yang tersedia dal
         <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519108/edit-profile_kzgl7x.png" width="200" alt="Edit Profil"/>
         <br><b>🔧 Edit Profil</b>
       </td>
+        <td align="center" colspan="3">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519109/realtime_zj1vkm.png" width="200" alt="Edit Profil"/>
+        <br><b>✨ Realtime Chat</b>
+      </td>
     </tr>
   </table>
 </div>
