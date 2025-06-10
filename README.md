@@ -1,27 +1,25 @@
+<div align="center">
+
 # 💬 ChatOI Mobile App (Android)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android" alt="Android Platform">
-  <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java" alt="Java Language">
-  <img src="https://img.shields.io/badge/API-21%2B-blue?style=for-the-badge&logo=android" alt="API Level">
-  <img src="https://img.shields.io/badge/Real--time-Pusher-purple?style=for-the-badge&logo=pusher" alt="Pusher">
-</div>
+<img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android" alt="Android Platform">
+<img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java" alt="Java Language">
+<img src="https://img.shields.io/badge/API-21%2B-blue?style=for-the-badge&logo=android" alt="API Level">
+<img src="https://img.shields.io/badge/Real--time-Pusher-purple?style=for-the-badge&logo=pusher" alt="Pusher">
 
-<br>
-
-Aplikasi klien Android modern untuk platform ChatOI yang memungkinkan pengguna melakukan percakapan real-time, mengelola profil personal, mengatur grup chat, dan berbagai fitur komunikasi lainnya dengan antarmuka yang elegan dan responsif.
+**Aplikasi klien Android modern untuk platform ChatOI yang memungkinkan pengguna melakukan percakapan real-time, mengelola profil personal, mengatur grup chat, dan berbagai fitur komunikasi lainnya dengan antarmuka yang elegan dan responsif.**
 
 ---
 
 ## 🔗 Repository Terkait
 
-<div align="center">
-  <a href="https://github.com/PangeranJJ4321/Mobile-Chat-API">
-    <img src="https://img.shields.io/badge/Backend%20API-ChatOI%20FastAPI-red?style=for-the-badge&logo=fastapi&logoColor=white" alt="Backend API">
-  </a>
-</div>
+<a href="https://github.com/PangeranJJ4321/Mobile-Chat-API">
+  <img src="https://img.shields.io/badge/Backend%20API-ChatOI%20FastAPI-red?style=for-the-badge&logo=fastapi&logoColor=white" alt="Backend API">
+</a>
 
 **📌 Link Repository API Backend**: [**ChatOI Backend (Python/FastAPI)**](https://github.com/PangeranJJ4321/Mobile-Chat-API)
+
+</div>
 
 ---
 
