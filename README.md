@@ -1,131 +1,287 @@
-# ChatOI Mobile App (Android)
+# 💬 ChatOI Mobile App (Android)
 
-Ini adalah aplikasi klien Android untuk platform MyChat. Aplikasi ini memungkinkan pengguna untuk melakukan chatting secara real-time, mengelola profil, melihat detail percakapan, dan fitur-fitur lainnya.
+<div align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android" alt="Android Platform">
+  <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java" alt="Java Language">
+  <img src="https://img.shields.io/badge/API-21%2B-blue?style=for-the-badge&logo=android" alt="API Level">
+  <img src="https://img.shields.io/badge/Real--time-Pusher-purple?style=for-the-badge&logo=pusher" alt="Pusher">
+</div>
 
-### Link Repository API Backend ChatOI App Mobile (Python/FastAPI) : [**ChatOI**](https://github.com/PangeranJJ4321/Mobile-Chat-API)
+<br>
 
-## Teknologi
+Aplikasi klien Android modern untuk platform ChatOI yang memungkinkan pengguna melakukan percakapan real-time, mengelola profil personal, mengatur grup chat, dan berbagai fitur komunikasi lainnya dengan antarmuka yang elegan dan responsif.
 
-* **Android Development**: Dikembangkan menggunakan Kotlin/Java dengan Android Studio.
-* **Minimum SDK**: API 21 (Android 5.0 Lollipop)
-* **Target SDK**: API 34 (Android 14)
-* **Gradle**: Sistem build otomatis.
-* **Retrofit**: Klien HTTP untuk komunikasi dengan backend REST API.
-* **Pusher Android Client**: Untuk fungsionalitas pesan real-time.
-* **Glide**: Library untuk memuat dan menampilkan gambar (avatar, dll.).
-* **Gson**: Library untuk serialisasi/deserialisasi objek Java ke/dari JSON.
-* **Material Design Components**: Untuk komponen UI modern.
-* **Lottie**: Untuk animasi.
-* **SharedPreferences**: Untuk caching data lokal.
+---
 
-## Memulai
+## 🔗 Repository Terkait
 
-Untuk meng-setup dan menjalankan aplikasi ini di lingkungan pengembangan Anda:
+<div align="center">
+  <a href="https://github.com/PangeranJJ4321/Mobile-Chat-API">
+    <img src="https://img.shields.io/badge/Backend%20API-ChatOI%20FastAPI-red?style=for-the-badge&logo=fastapi&logoColor=white" alt="Backend API">
+  </a>
+</div>
 
-### Prasyarat
+**📌 Link Repository API Backend**: [**ChatOI Backend (Python/FastAPI)**](https://github.com/PangeranJJ4321/Mobile-Chat-API)
 
-* **Android Studio**: Versi terbaru disarankan. [Unduh di sini](https://developer.android.com/studio).
-* **Java Development Kit (JDK)**: Versi yang kompatibel dengan Android Studio Anda.
-* Akses ke **MyChat Backend** yang sedang berjalan (diperlukan untuk fungsionalitas penuh).
+---
 
-### Langkah-langkah Instalasi & Konfigurasi
+## 📱 Preview Aplikasi
 
-1.  **Kloning Repositori:**
-    ```bash
-    git clone [https://github.com/PangeranJJ4321/ChatOI-Mobile-App](https://github.com/PangeranJJ4321/ChatOI-Mobile-App)
-    cd ChatOI-Mobile-App
-    cd MyChat
-    ```
+Berikut adalah tampilan visual dari berbagai halaman dan fitur yang tersedia dalam aplikasi ChatOI Mobile. Setiap screenshot menampilkan antarmuka pengguna yang telah dioptimalkan dengan Material Design untuk pengalaman yang intuitif dan modern:
 
-2.  **Buka Proyek di Android Studio:**
-    * Buka Android Studio.
-    * Pilih `File` > `Open` atau `Open an existing Android Studio project`.
-    * Navigasikan ke direktori `mychat-mobile` yang baru saja Anda kloning dan klik `OK`.
-    * Biarkan Gradle menyinkronkan proyek. Ini mungkin memerlukan waktu untuk mengunduh semua dependensi.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519108/login_qonye2.png" width="200" alt="Halaman Login"/>
+        <br><b>🔐 Halaman Login</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519107/register_kozpyw.png" width="200" alt="Halaman Registrasi"/>
+        <br><b>📝 Halaman Registrasi</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519107/conversation_wcjbzk.png" width="200" alt="Daftar Percakapan"/>
+        <br><b>💬 Daftar Percakapan</b>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519109/message_myhmiu.png" width="200" alt="Interface Chat"/>
+        <br><b>💭 Interface Chat</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519109/profile_dqs259.png" width="200" alt="Halaman Profil"/>
+        <br><b>👤 Halaman Profil</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519107/settings_ohnpqs.png" width="200" alt="Pengaturan"/>
+        <br><b>⚙️ Pengaturan</b>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519107/conversation-detail_ghnngl.png" width="200" alt="Detail Grup"/>
+        <br><b>👥 Detail Grup</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519107/add_member_rajoft.png" width="200" alt="Tambah Anggota"/>
+        <br><b>➕ Tambah Anggota</b>
+      </td>
+      <td align="center">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519108/edit-conversation_crwzug.png" width="200" alt="Edit Grup"/>
+        <br><b>✏️ Edit Grup</b>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="3">
+        <img src="https://res.cloudinary.com/douoytv3i/image/upload/v1749519108/edit-profile_kzgl7x.png" width="200" alt="Edit Profil"/>
+        <br><b>🔧 Edit Profil</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
-3.  **Konfigurasi Network Security (Penting untuk Backend Lokal):**
-    Jika Anda menjalankan backend secara lokal (misalnya di Docker pada IP lokal Anda) dan tidak menggunakan HTTPS, Anda perlu mengizinkan *cleartext traffic* untuk domain/IP tersebut.
+> **💡 Catatan**: Gambar di atas menampilkan sebagian dari halaman-halaman yang tersedia dalam aplikasi. Masih terdapat fitur-fitur tambahan yang belum terlihat pada preview ini. Untuk eksplorasi lebih mendalam terhadap seluruh fungsionalitas aplikasi, silakan jalankan project secara langsung dengan mengikuti panduan instalasi di bawah ini.
 
-    * Buat file XML baru bernama `network_security_config.xml` di `app/src/main/res/xml/`.
-        Jika direktori `xml` belum ada di `res/`, buatlah terlebih dahulu.
-    * Tambahkan konten berikut ke dalam file `network_security_config.xml`:
-        192.168.43.43 dari url Backend anda misal http://192.168.43.43:8000
+---
 
-        ```xml
-        <?xml version="1.0" encoding="utf-8"?>
-        <network-security-config>
-            <domain-config cleartextTrafficPermitted="true">
-                <domain includeSubdomains="true">192.168.43.43</domain>
-                </domain-config>
-        </network-security-config>
-        ```
+## 🚀 Stack Teknologi
 
-    * Tambahkan referensi ke file konfigurasi ini di `AndroidManifest.xml` Anda, di dalam tag `<application>`:
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>🔧 Development</b></td>
+      <td align="center"><b>📚 Libraries</b></td>
+      <td align="center"><b>🎨 UI/UX</b></td>
+    </tr>
+    <tr>
+      <td>
+        • <b>Android Studio</b><br>
+        • <b>Java/Kotlin</b><br>
+        • <b>Gradle Build System</b><br>
+        • <b>Min SDK 21</b> (Android 5.0+)<br>
+        • <b>Target SDK 34</b> (Android 14)
+      </td>
+      <td>
+        • <b>Retrofit</b> - REST API Client<br>
+        • <b>Pusher</b> - Real-time Messaging<br>
+        • <b>Glide</b> - Image Loading<br>
+        • <b>Gson</b> - JSON Serialization<br>
+        • <b>SharedPreferences</b> - Local Cache
+      </td>
+      <td>
+        • <b>Material Design Components</b><br>
+        • <b>Lottie Animations</b><br>
+        • <b>Modern UI Patterns</b><br>
+        • <b>Responsive Layout</b><br>
+        • <b>Dark/Light Theme</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
-        ```xml
-        <application
-            android:networkSecurityConfig="@xml/network_security_config"
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-            </application>
-        ```
+---
 
-4.  **Konfigurasi API Base URL dan Pusher Keys:**
-    Anda perlu mengonfigurasi aplikasi agar dapat berkomunikasi dengan *backend* Anda dan layanan Pusher. Ini biasanya dilakukan di file seperti `RetrofitClient.java` atau di file konfigurasi khusus.
+## 🏗️ Panduan Instalasi
 
-    * **Retrofit Base URL**: Pastikan `RetrofitClient.BASE_URL` menunjuk ke URL backend FastAPI Anda yang sedang berjalan (misalnya, `http://192.168.43.43:8000/` atau URL *server* Anda), Anda bisa mendapatkan IP lokal host dengan perintah seperti `ipconfig` (Windows) atau `ifconfig`/`ip a` (Linux/macOS). 
-    Jika Anda menjalankan backend dengan Docker di mesin lokal, gunakan alamat IP host Anda, bukan `localhost` atau `127.0.0.1`, karena kontainer emulator/perangkat Android memiliki lingkungan jaringan yang terpisah.
-        ```java
-        // app/src/main/java/com/example/mychat/retrofit_client/RetrofitClient.java
-        public class RetrofitClient {
-            // Ubah ini ke URL backend FastAPI Anda
-            public static final String BASE_URL = "http://YOUR_BACKEND_IP_OR_DOMAIN:8000/";
-            // Contoh: [http://192.168.43.43:8000/](http://192.168.43.43:8000/)
-            // ...
-        }
-        ```
-    * **Pusher Keys**: Pastikan `PUSHER_APP_KEY`, `PUSHER_APP_CLUSTER`, dan `PUSHER_AUTH_ENDPOINT` di `ChatActivity.java` (atau di tempat lain Anda mengelola konfigurasi Pusher) sesuai dengan kredensial aplikasi Pusher Anda. `PUSHER_AUTH_ENDPOINT` harus menunjuk ke endpoint otorisasi Pusher di backend FastAPI Anda (misalnya, `http://YOUR_BACKEND_IP_OR_DOMAIN:8000/messages/pusher/auth`).
-        ```java
-        // app/src/main/java/com/example/mychat/ChatActivity.java
-        // ...
-        String PUSHER_APP_KEY = "your_pusher_app_key"; // Ganti dengan kunci Pusher Anda
-        String PUSHER_APP_CLUSTER = "ap1"; // Ganti dengan cluster Pusher Anda (e.g., us2, eu)
-        String PUSHER_AUTH_ENDPOINT = RetrofitClient.BASE_URL + "messages/pusher/auth"; // Pastikan ini benar
-        // ...
-        ```
+### 📋 Prasyarat
 
-5.  **Siapkan Emulator atau Perangkat Fisik:**
-    * Anda bisa menggunakan Android Emulator yang dikonfigurasi di Android Studio.
-    * Atau sambungkan perangkat Android fisik Anda dan aktifkan `USB Debugging` di `Developer Options`.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Android%20Studio-Latest-green?style=flat-square&logo=android-studio" alt="Android Studio">
+        <br><a href="https://developer.android.com/studio"><b>Android Studio Terbaru</b></a>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/JDK-8%2B-orange?style=flat-square&logo=java" alt="JDK">
+        <br><b>Java Development Kit</b>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Backend-Running-blue?style=flat-square&logo=fastapi" alt="Backend">
+        <br><b>ChatOI Backend API</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
-6.  **Jalankan Aplikasi:**
-    * Setelah sinkronisasi Gradle selesai dan Anda telah mengonfigurasi semua yang diperlukan, klik tombol `Run 'app'` (ikon panah hijau) di toolbar Android Studio.
-    * Pilih emulator atau perangkat fisik target Anda.
+### 🔧 Langkah-langkah Setup
 
-## Fitur Caching
+#### 1️⃣ **Clone Repository**
+```bash
+git clone https://github.com/PangeranJJ4321/ChatOI-Mobile-App
+cd ChatOI-Mobile-App/MyChat
+```
 
-Aplikasi ini mengimplementasikan caching lokal menggunakan `SharedPreferences` dan `Gson` untuk meningkatkan pengalaman pengguna saat koneksi jaringan tidak stabil atau tidak ada. Data yang di-cache meliputi:
+#### 2️⃣ **Buka Project di Android Studio**
+- Buka Android Studio
+- Pilih `File` → `Open` → Pilih folder project
+- Tunggu Gradle sync selesai ⏳
 
-* **Profil Pengguna**: Informasi profil Anda sendiri di `ProfileFragment`.
-* **Daftar Pengguna Diblokir**: Daftar kontak yang telah Anda blokir.
-* **Riwayat Pesan**: Pesan-pesan dalam setiap percakapan di `ChatActivity`.
-* **Detail Chat Pribadi**: Informasi kontak dan pengaturan notifikasi di `DetailChatPribadiActivity`.
-* **Detail Grup**: Nama grup, deskripsi, avatar, dan daftar anggota di `GroupDetailsActivity`.
-* **Daftar Anggota yang Tersedia**: Daftar pengguna yang bisa ditambahkan ke grup di `AddMembersDialogFragment`.
+#### 3️⃣ **Konfigurasi Network Security** 🔒
+Untuk backend lokal tanpa HTTPS, buat file `network_security_config.xml`:
 
-Data ini akan dimuat dari cache terlebih dahulu untuk tampilan yang cepat, lalu di-refresh dari API jika koneksi tersedia.
+```xml
+<!-- app/src/main/res/xml/network_security_config.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.43.43</domain>
+    </domain-config>
+</network-security-config>
+```
 
-## Kontribusi
+Tambahkan ke `AndroidManifest.xml`:
+```xml
+<application
+    android:networkSecurityConfig="@xml/network_security_config"
+    ...>
+</application>
+```
 
-Ini adalah tugas mandiri pemrograman mobile android dengan Java
+#### 4️⃣ **Konfigurasi API & Pusher** 🔗
 
-**Catatan Penting:**
+**Retrofit Configuration:**
+```java
+// RetrofitClient.java
+public class RetrofitClient {
+    public static final String BASE_URL = "http://YOUR_BACKEND_IP:8000/";
+    // Contoh: http://192.168.43.43:8000/
+}
+```
 
-* **Sesuaikan versi SDK** dengan yang ada di `build.gradle` aplikasi Anda.
-* **Instruksi konfigurasi Pusher/Retrofit** harus akurat sesuai dengan bagaimana Anda mengelola *constant* ini di kode Anda.
-* **Alamat IP Backend:** Ingatkan pengguna bahwa jika backend berjalan di Docker di mesin lokal, mereka mungkin perlu menggunakan IP lokal host mereka (misalnya, `192.168.1.xxx`) dan bukan `localhost` atau `127.0.0.1` dari emulator/perangkat. Anda bisa mendapatkan IP lokal host dengan perintah seperti `ipconfig` (Windows) atau `ifconfig`/`ip a` (Linux/macOS).
+**Pusher Configuration:**
+```java
+// ChatActivity.java
+String PUSHER_APP_KEY = "your_pusher_app_key";
+String PUSHER_APP_CLUSTER = "ap1"; // Sesuaikan cluster
+String PUSHER_AUTH_ENDPOINT = RetrofitClient.BASE_URL + "messages/pusher/auth";
+```
 
+#### 5️⃣ **Setup Device** 📱
+- **Emulator**: Konfigurasi AVD di Android Studio
+- **Physical Device**: Aktifkan USB Debugging
+
+#### 6️⃣ **Run Application** 🚀
+Klik tombol ▶️ **Run 'app'** di Android Studio
+
+---
+
+## 💾 Sistem Caching Pintar
+
+Aplikasi ini dilengkapi dengan sistem caching lokal yang canggih menggunakan `SharedPreferences` dan `Gson` untuk performa optimal:
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>👤 User Data</b></td>
+      <td align="center"><b>💬 Chat Data</b></td>
+      <td align="center"><b>👥 Group Data</b></td>
+    </tr>
+    <tr>
+      <td>
+        • Profil Pengguna<br>
+        • Pengaturan Personal<br>
+        • Daftar Blokir
+      </td>
+      <td>
+        • Riwayat Pesan<br>
+        • Detail Chat<br>
+        • Status Notifikasi
+      </td>
+      <td>
+        • Info Grup<br>
+        • Daftar Anggota<br>
+        • Pengaturan Grup
+      </td>
+    </tr>
+  </table>
+</div>
+
+> **⚡ Smart Loading**: Data dimuat dari cache untuk respons cepat, kemudian di-refresh dari API jika koneksi tersedia.
+
+---
+
+## 🤝 Kontribusi
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Project%20Type-Academic%20Assignment-yellow?style=for-the-badge" alt="Academic Project">
+  <br>
+  <i>Proyek tugas mandiri pemrograman mobile Android dengan Java</i>
+</div>
+
+---
+
+## ⚠️ Catatan Penting
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">🔧</td>
+      <td><b>SDK Version</b></td>
+      <td>Pastikan sesuai dengan <code>build.gradle</code></td>
+    </tr>
+    <tr>
+      <td align="center">🌐</td>
+      <td><b>Network Config</b></td>
+      <td>Konfigurasi Pusher/Retrofit sesuai environment</td>
+    </tr>
+    <tr>
+      <td align="center">🏠</td>
+      <td><b>Local Backend</b></td>
+      <td>Gunakan IP lokal, bukan <code>localhost</code> untuk emulator</td>
+    </tr>
+  </table>
+</div>
+
+**💡 Tips**: Gunakan `ipconfig` (Windows) atau `ifconfig`/`ip a` (Linux/macOS) untuk mendapatkan IP lokal.
+
+---
+
+<div align="center">
+  <h3>📞 Butuh Bantuan?</h3>
+  <p>Jika ada pertanyaan atau kendala, silakan buat <b>issue</b> di repository ini!</p>
+  
+  <img src="https://img.shields.io/badge/Made%20with-❤️%20%26%20☕-red?style=for-the-badge" alt="Made with Love">
+</div>
